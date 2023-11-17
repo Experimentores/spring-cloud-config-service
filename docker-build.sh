@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
-docker rmi tripstore-config-service
-docker build . -t tripstore-config-service
+name=tripstore-config-service
+docker rmi "$name"
+docker build . -t "$name"

@@ -1,4 +1,5 @@
-FROM openjdk:17
+FROM openjdk:17-alpine
 ADD target/*.jar app.jar
 EXPOSE 8760
+RUN apk --no-cache add curl
 ENTRYPOINT [ "java", "-jar", "app.jar" ]
